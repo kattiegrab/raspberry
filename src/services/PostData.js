@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 export function sendData(email, password) {
-  const URL = 'http://recruitment-api.pyt1.stg.jmr.pl/login';
+  const URL = 'https://recruitment-api.pyt1.stg.jmr.pl/login';
   const DATA = {
       email,
       password
