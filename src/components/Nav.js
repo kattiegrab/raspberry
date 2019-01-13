@@ -8,6 +8,10 @@ const NavWrapper = styled.nav`
     justify-content: center;
     align-items: center;
     padding: 40px 0;
+    @media (max-width: 768px) {
+        justify-content: flex-end;
+        padding-right: 5%;
+    }
     .menu {
         width: 100%;
         max-width: 619px;
@@ -15,7 +19,7 @@ const NavWrapper = styled.nav`
         justify-content: space-between;
         align-items: center;
         text-align: center;
-        a {
+        button {
             color: #fff;
             text-transform: uppercase;
             text-decoration: none;
@@ -43,7 +47,7 @@ const NavWrapper = styled.nav`
                 transition: width 0.5s ease-in-out;
                 z-index: 500;
             }
-            &:hover,&:focus{
+            &:hover {
                 &:before{
                     width:50%
                 }
@@ -112,7 +116,7 @@ const NavWrapper = styled.nav`
             justify-content: center;
             align-items: center;
             max-width: unset;
-            a {
+            button {
                 display: flex;
                 justify-content: center;
                 margin: 0;
@@ -129,14 +133,14 @@ const NavWrapper = styled.nav`
                 display: none;
             }
         }
-        #menu-toggle ~ .menu a {
+        #menu-toggle ~ .menu button {
             height: 0;
             margin: 0;
             padding: 0;
             border: 0;
             transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
         }
-        #menu-toggle:checked ~ .menu a {
+        #menu-toggle:checked ~ .menu button {
             height: 2.5em;
             padding: 0.5em;
             transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
@@ -154,16 +158,16 @@ const NavWrapper = styled.nav`
 const Nav = () => (
     <NavWrapper>
         <input id="menu-toggle" type="checkbox" />
-        <label className='menu-button-container' for="menu-toggle">
+        <label className='menu-button-container' htmlFor="menu-toggle">
             <span className='menu-button'></span>
         </label>
         <img className='mobileLogo' src={logo} alt="Raspberry Kingdom"/>
         <div className="menu">
-            <a href="#">about</a>
-            <a href="#">offer</a>
+            <button href="#">about</button>
+            <button href="#">offer</button>
             <img src={logo} alt="Raspberry Kingdom"/>
-            <a href="#">gallery</a>
-            <a href="#">contact</a>
+            <button href="#">gallery</button>
+            <button href="#">contact</button>
         </div>
     </NavWrapper>
 )

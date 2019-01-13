@@ -134,10 +134,10 @@ class App extends Component {
     super();
     this.state = {
       open: false,
-      email: '',
+      login: '',
       password: '',
-      response: '',
-      error: null
+      message: '',
+      status: ''
     };
   };
 
@@ -163,24 +163,28 @@ class App extends Component {
   handlerFormOnSubmit = e => {
     e.preventDefault();
 
-    sendData(this.state.email, this.state.password)
+    sendData(this.state.login, this.state.password, this.state.message, this.state.status)
       .then( res => {
         this.setState({
-          email: '',
-          password: ''
+          login: res.data.login,
+          password: res.data.password,
+          message: res.data.message,
+          status: res.data.status
         })
+        console.log(this.state);
       })
       .catch( err => {
         this.setState({
-          email: '',
-          password: '',
-          error: 'error'
+          login: err.data.login,
+          password: err.data.password,
+          message: err.data.message,
+          status: err.data.status
         })
       });
   }
 
   render() {
-    const { open, email, password, error } = this.state;
+    const { open, login, password, message, status } = this.state;
     return (
       <>
         <GlobalStyle />
@@ -200,17 +204,17 @@ class App extends Component {
         >
           <DialogTitle>Are you Raspeberry Knight?</DialogTitle>
           <DialogContent>
-            { !error ?
+            { !status ?
                 <form onSubmit={this.handlerFormOnSubmit}>
                   <TextField
                     margin="dense"
-                    id="email"
+                    id="login"
                     label="Email"
                     type="email"
                     fullWidth
-                    value={email}
-                    onChange={this.handleChange('email')}
-                    required='true'
+                    value={login}
+                    onChange={this.handleChange('login')}
+                    required={true}
                   />
                   <TextField
                     margin="dense"
@@ -220,12 +224,12 @@ class App extends Component {
                     fullWidth
                     value={password}
                     onChange={this.handleChange('password')}
-                    required='true'
+                    required={true}
                   />
-                  <SubmitButton type="submit">log in</SubmitButton>
+                  <SubmitButton type="submit" onClick={this.handleChange('status')} value={status}>log in</SubmitButton>
                   <CloseButton onClick={this.handleClose}>x</CloseButton>
                 </form>
-                : <span>I don't think so... </span>
+                : <span>{message}</span>
               }
             </DialogContent>
           </Dialog>

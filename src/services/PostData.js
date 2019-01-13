@@ -1,17 +1,19 @@
 import axios from 'axios';
 
-export function sendData(email, password) {
+export function sendData(login, password, message, status) {
   const URL = 'https://recruitment-api.pyt1.stg.jmr.pl/login';
   const DATA = {
-      email,
-      password
+      login,
+      password,
+      message, 
+      status
   };
   const AXIOS_CONFIG = {
     headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
+        'Content-Type': 'application/json'
     }
   };
 
   return axios.post(URL, DATA, AXIOS_CONFIG);
 }
+
