@@ -171,7 +171,6 @@ class App extends Component {
           message: res.data.message,
           status: res.data.status
         })
-        console.log(this.state);
       })
       .catch( err => {
         this.setState({
