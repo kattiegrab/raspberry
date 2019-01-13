@@ -25,6 +25,8 @@ const NavWrapper = styled.nav`
             text-decoration: none;
             font-weight: 400;
             position: relative;
+            background: transparent;
+            border: none;
             &:before{
                 content: " ";
                 position: absolute;
