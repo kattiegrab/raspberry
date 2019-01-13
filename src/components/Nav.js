@@ -50,12 +50,20 @@ const NavWrapper = styled.nav`
                 z-index: 500;
             }
             &:hover {
+                cursor: pointer;
                 &:before{
                     width:50%
                 }
                 &:after{
                     width:50%
                 }
+            }
+            &:active {
+                outline: 0;
+                border: none;
+            }
+            &:focus {
+                outline: 0;
             }
         }
     }
