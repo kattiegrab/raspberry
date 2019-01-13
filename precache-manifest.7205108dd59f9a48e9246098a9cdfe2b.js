@@ -16,15 +16,15 @@ self.__precacheManifest = [
     "url": "/raspberry/static/js/runtime~main.d0272cec.js"
   },
   {
-    "revision": "70e6f66ab54f6f945a08",
-    "url": "/raspberry/static/js/main.70e6f66a.chunk.js"
+    "revision": "0fa856aa7ed55f752629",
+    "url": "/raspberry/static/js/main.0fa856aa.chunk.js"
   },
   {
     "revision": "f8eecd707a02563b3533",
     "url": "/raspberry/static/js/1.f8eecd70.chunk.js"
   },
   {
-    "revision": "be63c346a9d81e567cbe9062bc8d1c83",
+    "revision": "4eed58a43984780c4a09473dcc6be3b9",
     "url": "/raspberry/index.html"
   }
 ];

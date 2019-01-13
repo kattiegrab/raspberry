@@ -1,6 +1,6 @@
 {
-  "main.js": "/raspberry/static/js/main.70e6f66a.chunk.js",
-  "main.js.map": "/raspberry/static/js/main.70e6f66a.chunk.js.map",
+  "main.js": "/raspberry/static/js/main.0fa856aa.chunk.js",
+  "main.js.map": "/raspberry/static/js/main.0fa856aa.chunk.js.map",
   "static/js/1.f8eecd70.chunk.js": "/raspberry/static/js/1.f8eecd70.chunk.js",
   "static/js/1.f8eecd70.chunk.js.map": "/raspberry/static/js/1.f8eecd70.chunk.js.map",
   "runtime~main.js": "/raspberry/static/js/runtime~main.d0272cec.js",
@@ -9,6 +9,6 @@
   "static/media/aleo.ttf": "/raspberry/static/media/aleo.d16b5eb2.ttf",
   "static/media/bakery.ttf": "/raspberry/static/media/bakery.39dd978b.ttf",
   "index.html": "/raspberry/index.html",
-  "precache-manifest.a0885fbc04a924e4c1afbd554390b2ec.js": "/raspberry/precache-manifest.a0885fbc04a924e4c1afbd554390b2ec.js",
+  "precache-manifest.7205108dd59f9a48e9246098a9cdfe2b.js": "/raspberry/precache-manifest.7205108dd59f9a48e9246098a9cdfe2b.js",
   "service-worker.js": "/raspberry/service-worker.js"
 }
